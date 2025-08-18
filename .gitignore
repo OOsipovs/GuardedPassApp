@@ -1,0 +1,93 @@
+# See https://help.github.com/articles/ignoring-files for more about ignoring files.
+
+# Ruby on Rails specific
+*.rbc
+capybara-*.html
+.rspec
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/db/*.sqlite3-*
+/log/*
+/tmp/*
+/public/system/*
+/public/uploads/*
+/coverage/
+/spec/tmp/*
+/spec/examples.txt
+/spec/reports/*
+/spec/lib/tasks/*
+/public/assets/*
+/public/packs/*
+/public/packs-test/*
+/node_modules/
+/yarn-error.log
+/yarn-debug.log
+/.yarn-integrity
+
+# General
+*.gem
+*.rbc
+*.swp
+*~
+*.bak
+*.orig
+*.log
+*.pid
+*.seed
+.DS_Store
+.env
+.env.*
+!.env.example
+!.env.test
+!.env.development
+!.env.production
+
+# Bundle
+Gemfile.lock
+.bundle
+vendor/bundle
+vendor/cache
+vendor/ruby
+
+# Rails
+/config/master.key
+/config/credentials/*.yml.enc
+/config/credentials.yml.enc
+/storage/*
+!/storage/.keep
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+/yarn-debug.log
+/.yarn
+
+# Documentation
+/rdoc/
+/doc/*
+/yardoc/*
+
+# Testing
+/coverage/
+/spec/fixtures/*
+!/spec/fixtures/.keep
+/test/tmp/*
+/test/version_tmp/*
+/tmp/cache/*
+/tmp/sockets/*
+/tmp/pids/*
+/tmp/sessions/*
+
+# Other
+.idea/
+.vscode/
+*.code-workspace
+*.sublime-project
+*.sublime-workspace
+
+# Yarn
+/node_modules
+/yarn-error.log
+/yarn-debug.log
+/.yarn
+/.pnp.*
