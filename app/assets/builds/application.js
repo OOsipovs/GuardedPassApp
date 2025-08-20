@@ -8537,16 +8537,6 @@ var application = Application.start();
 application.debug = false;
 window.Stimulus = application;
 
-// app/javascript/controllers/hello_controller.js
-var hello_controller_default = class extends Controller {
-  connect() {
-    this.element.textContent = "Hello World!";
-  }
-};
-
-// app/javascript/controllers/index.js
-application.register("hello", hello_controller_default);
-
 // node_modules/@popperjs/core/lib/index.js
 var lib_exports = {};
 __export(lib_exports, {
@@ -13706,6 +13696,18 @@ var Toast = class _Toast extends BaseComponent {
 };
 enableDismissTrigger(Toast);
 defineJQueryPlugin(Toast);
+
+// app/javascript/controllers/toast_controller.js
+var ToastController = class extends Controller {
+  connect() {
+    const toast = Toast.getOrCreateInstance(this.element);
+    toast.show();
+  }
+};
+var toast_controller_default = ToastController;
+
+// app/javascript/controllers/index.js
+application.register("toast", toast_controller_default);
 /*! Bundled license information:
 
 @hotwired/turbo/dist/turbo.es2017-esm.js:
